@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+* {
+    font-family: "Roboto Mono", monospace;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    background: url(./assets/background.png);
+}
+
+.container {
+    background-color: #aaaaaa;
+    width: 500px;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 100px auto 0;
+}
+
+.input-task {
+    border: none;
+    border-radius: 3px;
+    width: 300px;
+    height: 40px;
+    padding-left: 10px;
+}
+
+.button-task {
+    border: none;
+    border-radius: 3px;
+    height: 40px;
+    background-color: #191635;
+    color: #ffffff;
+    font-size: 17px;
+    padding: 0 15px;
+    float: right;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.button-task:active {
+    opacity: 0.6;
+}
+
+.button-task:hover {
+    opacity: 0.8;
+}
+
+.list-task {
+    width: 100%;
+    list-style: none;
+    margin-top: 30px;
+}
+
+.task {
+    background-color: #f2f2f2;
+    box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+img {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out; /* efeito no opacity do hover/ ease in out = entrada e saida*/
+}
+
+.task:hover img{
+    opacity: 1;
+}
+
+.done {
+    background-color: #8fac55;
+    text-decoration: line-through;
+}
+
+@media screen and (max-width: 700px) {
+    .container {
+        width: 300px; 
+    }
+
+    .input-task {
+        width: 160px;
+    }
+
+    .mark {
+        height: 30px;
+        width: 30px;
+        opacity: 1;
+    }
+
+    p {
+        font-size: 13px
+    }
+}
